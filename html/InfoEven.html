@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TURIBQ</title>
+
+    <!-- Estilo de Boostrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!--BOOSTRAP-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="js/bootstrap.js">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!--Hasta aqui-->
+
+    <link rel="icon" href="../img/IconoBQ.png">
+    <script src="../js/login.js"></script>
+
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand">TURIBQ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/Usuario.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/PreguntasFr.html">Preguntas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/contactox.html">Contactenos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/Busqueda.html">Explorar</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Usuarios
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="../index.html" onclick="logout()">Cerrar sesión</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+
+<body class="bg-muted">
+    <!-- Carousel Start -->
+    <div id="header-carousel" class="carousel slide" data-bs-ride="carousel"></div>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="../img/HotelBQ-1.jpg" alt="First slide">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 700px;">
+                        <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">TURIBQ</h6>
+                        <h1 class="display-3 text-white mb-4 animated slideInDown"><strong>Descubre lo mejor de
+                            Barranquilla</strong></h1>
+                        <a href="../html/Hoteles.html"
+                            class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Hoteles</a>
+                        <a href="../html/InfoRes.html"
+                            class="btn btn-light py-md-3 px-md-5 animated slideInRight">Restaurantes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="../img/HotelBQ-2.jpg" alt="Second slide">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 700px;">
+                        <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">TURIBQ</h6>
+                        <h1 class="display-3 text-white mb-4 animated slideInDown"><strong>Descubre lo mejor de
+                            Barranquilla</strong></h1>
+                        <a href="../html/Hoteles.html"
+                            class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Hoteles</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="../img/BQ-3.jpg" alt="Third slide">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 700px;">
+                        <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">TURIBQ</h6>
+                        <h1 class="display-3 text-white mb-4 animated slideInDown"><strong>Descubre lo mejor de
+                            Barranquilla</strong></h1>
+                        <a href="../html/InfoRes.html"
+                            class="btn btn-light py-md-3 px-md-5 animated slideInRight">Restaurantes</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+    </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- Event Start 1 -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title text-center text-primary text-uppercase">EVENTOS EN BARRANQUILLA</h6>
+                <h1 class="mb-5">Próximos Eventos</h1>
+            </div>
+            <div class="row g-4">
+                <!-- Evento 1 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="../img/festival-gastronomico.jpg" alt="Festival Gastronómico">
+                        </div>
+                        <div class="p-4 mt-2">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="mb-0">Festival Gastronómico</h5>
+                            </div>
+                            <p class="fa fa-calendar text-primary">Fecha: 25 de Julio, 2023</p>
+                            <p class="fa fa-map-marker text-primary">Lugar: Centro de Convenciones Barranquilla</p>
+                            <p class="text-body mb-3">Disfruta de una amplia variedad de platos típicos caribeños y
+                                mariscos en el Festival Gastronómico de Barranquilla. ¡Una experiencia culinaria que no
+                                te puedes perder!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento 2 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="../img/concierto.jpg" alt="Concierto en Barranquilla">
+                        </div>
+                        <div class="p-4 mt-2">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="mb-0">Concierto: Noche Caribeña</h5>
+                            </div>
+                            <p class="fa fa-calendar text-primary">Fecha: 5 de Agosto, 2023</p>
+                            <p class="fa fa-map-marker text-primary">Lugar: Estadio Metropolitano</p>
+                            <p class="text-body mb-3">Vive una noche llena de música y baile con los ritmos caribeños
+                                más populares en el concierto "Noche Caribeña". Artistas locales e internacionales te
+                                deleitarán con su talento.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento 3 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="../img/carnaval.jpg" alt="Carnaval de Barranquilla">
+                        </div>
+                        <div class="p-4 mt-2">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="mb-0">Carnaval de Barranquilla</h5>
+                            </div>
+                            <p class="fa fa-calendar text-primary">Fecha: Febrero de cada año</p>
+                            <p class="fa fa-map-marker text-primary">Lugar: Diferentes lugares de la ciudad</p>
+                            <p class="text-body mb-3">¡Prepárate para la fiesta más grande de Barranquilla! El Carnaval
+                                de Barranquilla te espera con desfiles, música, baile y alegría desbordante. ¡Únete a la
+                                celebración!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento 4 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="../img/festival-danzas.jpg" alt="Festival de Danzas">
+                        </div>
+                        <div class="p-4 mt-2">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="mb-0">Festival de Danzas Folclóricas</h5>
+                            </div>
+                            <p class="fa fa-calendar text-primary">Fecha: 15 al 18 de Agosto, 2023</p>
+                            <p class="fa fa-map-marker text-primary">Lugar: Teatro Amira de la Rosa</p>
+                            <p class="text-body mb-3">Sumérgete en la riqueza cultural de la región en el Festival de
+                                Danzas Folclóricas de Barranquilla. Grupos de danza locales e internacionales
+                                presentarán impresionantes actuaciones tradicionales.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento 5 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="../img/feria-artesanal.jpg" alt="Feria Artesanal">
+                        </div>
+                        <div class="p-4 mt-2">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="mb-0">Feria Artesanal</h5>
+                            </div>
+                            <p class="fa fa-calendar text-primary">Fecha: 2 al 5 de Septiembre, 2023</p>
+                            <p class="fa fa-map-marker text-primary">Lugar: Parque de los Sueños</p>
+                            <p class="text-body mb-3">Explora la creatividad y habilidades artesanales en la Feria
+                                Artesanal de Barranquilla. Encontrarás artesanías únicas hechas a mano por talentosos
+                                artistas locales. ¡Una oportunidad perfecta para llevarse un recuerdo especial!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento 6 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="../img/cine-al-aire-libre.jpg" alt="Cine al Aire Libre">
+                        </div>
+                        <div class="p-4 mt-2">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="mb-0">Cine al Aire Libre</h5>
+                            </div>
+                            <p class="fa fa-calendar text-primary">Fecha: 8 al 10 de Septiembre, 2023</p>
+                            <p class="fa fa-map-marker text-primary">Lugar: Plaza de la Paz</p>
+                            <p class="text-body mb-3">Disfruta de noches de cine bajo las estrellas en la Plaza de la
+                                Paz. Películas nacionales e internacionales se proyectarán en una pantalla gigante para
+                                toda la familia. ¡No olvides tu manta y palomitas!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento 7 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="../img/festival-jazz.jpg" alt="Festival de Jazz">
+                        </div>
+                        <div class="p-4 mt-2">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="mb-0">Festival Internacional de Jazz</h5>
+                            </div>
+                            <p class="fa fa-calendar text-primary">Fecha: 5 al 8 de Septiembre, 2023</p>
+                            <p class="fa fa-map-marker text-primary">Lugar: Teatro Amira de la Rosa</p>
+                            <p class="text-body mb-3">Vive el ritmo del jazz en el Festival Internacional de Jazz de
+                                Barranquilla. Músicos locales e internacionales te impresionarán con sus
+                                interpretaciones únicas. ¡Una experiencia musical inolvidable!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento 8 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="../img/exposicion-arte.jpg" alt="Exposición de Arte">
+                        </div>
+                        <div class="p-4 mt-2">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="mb-0">Exposición de Arte Contemporáneo</h5>
+                            </div>
+                            <p class="fa fa-calendar text-primary">Fecha: 12 al 15 de Septiembre, 2023</p>
+                            <p class="fa fa-map-marker text-primary">Lugar: Galería de Arte Moderno</p>
+                            <p class="text-body mb-3">Admira las obras de artistas contemporáneos en la Exposición de
+                                Arte Contemporáneo de Barranquilla. Pinturas, esculturas y más te esperan en esta
+                                fascinante muestra de creatividad.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evento 9 -->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="../img/festival-teatro.jpg" alt="Festival de Teatro">
+                        </div>
+                        <div class="p-4 mt-2">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="mb-0">Festival de Teatro</h5>
+                            </div>
+                            <p class="fa fa-calendar text-primary">Fecha: 20 al 25 de Septiembre, 2023</p>
+                            <p class="fa fa-map-marker text-primary">Lugar: Teatros de la ciudad</p>
+                            <p class="text-body mb-3">Sumérgete en el mundo del teatro con el Festival de Teatro de
+                                Barranquilla. Disfruta de representaciones escénicas únicas y diversas que te harán
+                                reír, llorar y reflexionar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
+            <div class="container pb-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="bg-primary rounded p-4">
+                            <a href="index.html">
+                                <h1 class="text-white text-uppercase mb-3">TURIBQ</h1>
+                            </a>
+                            <p class="text-white mb-0">-Bienvenido</p>
+                            <p class="text-white mb-0">Juan David Charris Barceló</p>
+                            <p class="text-white mb-0">Habib José Morales Minaya</p>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h6 class="section-title text-start text-primary text-uppercase mb-4">Contacto</h6>
+                        </p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+57 0000000000</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>Turibq123@gmail.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-12">
+                        <div class="row gy-5 g-4">
+                            <div class="col-md-6">
+                                <h6 class="section-title text-start text-primary text-uppercase mb-4">
+                                    OPCIONES</h6>
+                                <a class="btn btn-link" href="../html/Acerca de nosotros.html" target="_blank">Acerca de
+                                    nosotros</a>
+                                <a class="btn btn-link" href="../html/TerminosDeUso.html" target="_blank">Terminos y
+                                    condiciones</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="copy text-center">©<span class="color-span">copyright/TURIBQ</span></p>
+        </div>
+    </footer>
+
+</html>

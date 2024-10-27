@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar Sesión</title>
+    <!-- BOOSTRAP -->
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="../js/bootstrap.js" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <!-- Hasta aqui -->
+    <link rel="icon" href="../img/IconoBQ.png" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/login.js"></script>
+</head>
+
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand">TURIBQ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <a href="../html/MenuAD.html" class="nav-link">Volver Atras</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html" onclick="logout()">Cerrar sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body class="bg-image mb-5" style="background-image: url('../img/Fondo.jpeg')">
+
+    <div class="pt-5">
+        <div class="row bg-dark pt-6">
+            <div class="col-lg-4">
+                <canvas id="grafica1"></canvas>
+            </div>
+            <div class="col-lg-6">
+                <canvas id="grafica2"></canvas>
+            </div>
+        </div>
+        <div class="row bg-dark pt-5">
+            <div class="col-lg-4">
+                <canvas id="grafica3"></canvas>
+            </div>
+            <div class="col-lg-6">
+                <canvas id="grafica4"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/Estadisticas/graficahotel.js"></script>
+    <script>visitas_hotel()</script>
+    <script src="../js/Estadisticas/graficasitio.js"></script>
+    <script>visitas_sitios()</script>
+    <script src="../js/Estadisticas/graficaturista.js"></script>
+    <script>turista()</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TURIBQ</title>
+  <!--BOOSTRAP-->
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../js/bootstrap.js">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!--Hasta aqui-->
+  <link rel="icon" href="../img/IconoBQ.png">
+</head>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand">TURIBQ</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../html/Usuario.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/PreguntasFr.html">Preguntas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/contactox.html">Contactenos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/Busqueda.html">Explorar</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Usuarios
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="../index.html" onclick="logout()">Cerrar sesión</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<body class="bg-image" style="background-image: url('../img/HotelBQ-1.jpg');">
+  <div class="container mt-3 mb-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="contact-section bg-light p-4 rounded">
+          <h2 class="text-center">Formulario de Contacto</h2>
+          <form action="https://formsubmit.co/turibq123@gmail.com" method="POST">
+            <div class="form-group">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" class="form-control" required placeholder="Nombre y apellido" name="name">
+            </div>
+            <div class="form-group">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="email" class="form-control" required placeholder="Correo electrónico" name="email">
+            </div>
+            <div class="form-group">
+              <i class="fa-solid fa-pen-to-square"></i>
+              <textarea cols="30" class="form-control" rows="10" placeholder="Escribe tu mensaje"
+                name="message"></textarea>
+            </div>
+            <div class="submit-container text-center">
+              <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#successModal">Enviar mensaje</button>
+            </div>
+            <input type="hidden" name="_next" value="http://localhost:8000/html/contactox.html">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_formsubmit_id" value="form"> <!-- Agregamos el atributo "value" -->
+          </form> <!-- Move this line here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal LOGIN-->
+  <div class="modal fade" id="successModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">INFORMACIÓN</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <p>¡Correo enviado con éxito!</p>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+
+</html>

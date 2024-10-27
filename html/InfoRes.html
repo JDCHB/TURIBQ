@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TURIBQ</title>
+
+    <!-- Estilo de Boostrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!--BOOSTRAP-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="js/bootstrap.js">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!--Hasta aqui-->
+
+    <link rel="icon" href="../img/IconoBQ.png">
+    <script src="../js/login.js"></script>
+
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand">TURIBQ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/Usuario.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/PreguntasFr.html">Preguntas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/contactox.html">Contactenos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/Busqueda.html">Explorar</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Usuarios
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="../index.html" onclick="logout()">Cerrar sesión</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+
+<body class="bg-muted">
+    <!-- Carousel Start -->
+    <div id="header-carousel" class="carousel slide" data-bs-ride="carousel"></div>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="../img/HotelBQ-1.jpg" alt="First slide">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 700px;">
+                        <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">TURIBQ</h6>
+                        <h1 class="display-3 text-white mb-4 animated slideInDown"><strong>Descubre lo mejor de
+                            Barranquilla</strong></h1>
+                        <a href="../html/Hoteles.html"
+                            class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Hoteles</a>
+                        <a href="../html/InfoEven.html"
+                            class="btn btn-light py-md-3 px-md-5 animated slideInRight">Eventos</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="../img/HotelBQ-2.jpg" alt="Second slide">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 700px;">
+                        <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">TURIBQ</h6>
+                        <h1 class="display-3 text-white mb-4 animated slideInDown"><strong>Descubre lo mejor de
+                            Barranquilla</strong></h1>
+                        <a href="../html/Hoteles.html"
+                            class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Hoteles</a>
+                        <a href="../html/InfoEven.html"
+                            class="btn btn-light py-md-3 px-md-5 animated slideInRight">Eventos</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="../img/BQ-3.jpg" alt="Third slide">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 700px;">
+                        <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">TURIBQ</h6>
+                        <h1 class="display-3 text-white mb-4 animated slideInDown"><strong>Descubre lo mejor de
+                            Barranquilla</strong></h1>
+                        <a href="../html/Hoteles.html"
+                            class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Hoteles</a>
+                        <a href="../html/InfoEven.html"
+                            class="btn btn-light py-md-3 px-md-5 animated slideInRight">Eventos</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+    </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- Restaurant Start 1-->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title text-center text-primary text-uppercase">INFORMACIÓN</h6>
+                <h1 class="mb-5">Informacion de los <span class="text-primary text-uppercase">Restaurantes</span></h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="../img/La cueva Res.jpg" alt="">
+                        </div>
+                        <div class="p-4 mt-2">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="mb-0">La Cueva</h5>
+                                <div class="ps-2">
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                </div>
+                            </div>
+                            <p class="fa fa-map-marker text-primary"> Carrera 38 # 80-190, Barranquilla.</p>
+                            <p class="text-body mb-3">Este restaurante es conocido por sus deliciosos platos de mariscos
+                                y comida típica caribeña</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restautant Start 2-->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="../img/El patio Res.jpeg" alt="">
+                        </div>
+                        <div class="p-4 mt-2">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="mb-0">El patio</h5>
+                                <div class="ps-2">
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                </div>
+                            </div>
+                            <p class="fa fa-map-marker text-primary"> Carrera 52 # 75-37, Barranquilla</p>
+                            <p class="text-body mb-3">Con una atmósfera acogedora, El Patio es conocido por su deliciosa
+                                comida casera y platos típicos de la región.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant Start 3-->
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="../img/Cueva Morgan Res.jpg" alt="">
+                        </div>
+                        <div class="p-4 mt-2">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="mb-0">Ibis budget</h5>
+                                <div class="ps-2">
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                </div>
+                            </div>
+                            <p class="fa fa-map-marker text-primary"> Carrera 52 # 75-37, Barranquilla</p>
+                            <p class="text-body mb-3">Con una atmósfera acogedora, El Patio es conocido por su deliciosa
+                                comida casera y platos típicos de la región.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
+        <div class="container pb-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-4">
+                    <div class="bg-primary rounded p-4">
+                        <a href="index.html">
+                            <h1 class="text-white text-uppercase mb-3">TURIBQ</h1>
+                        </a>
+                        <p class="text-white mb-0">-Bienvenido</p>
+                        <p class="text-white mb-0">Juan David Charris Barceló</p>
+                        <p class="text-white mb-0">Habib José Morales Minaya</p>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <h6 class="section-title text-start text-primary text-uppercase mb-4">Contacto</h6>
+                    </p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+57 0000000000</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>Turibq123@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-12">
+                    <div class="row gy-5 g-4">
+                        <div class="col-md-6">
+                            <h6 class="section-title text-start text-primary text-uppercase mb-4">
+                                OPCIONES</h6>
+                            <a class="btn btn-link" href="../html/Acerca de nosotros.html" target="_blank">Acerca de
+                                nosotros</a>
+                            <a class="btn btn-link" href="../html/TerminosDeUso.html" target="_blank">Terminos y
+                                condiciones</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="copy text-center">©<span class="color-span">copyright/TURIBQ</span></p>
+    </div>
+</footer>
+
+</html>

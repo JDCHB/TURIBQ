@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMINISTRADOR</title>
+    <!--BOOSTRAP-->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../js/bootstrap.js">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!--Hasta aqui-->
+    <link rel="icon" href="../img/IconoBQ.png">
+    <script src="../js/login.js"></script>
+    <script src="../js/registroAD.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand">TURIBQ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <a href="../html/EleccionAD.html" class="nav-link">Volver Atras</a>
+                    <a href="../html/Estadisticas.html" class="nav-link">Estadisticas</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html" onclick="logout()">Cerrar sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body class="bg-image" style="background-image: url('../img/Fondo.jpeg')">
+
+    <div>
+        <div>
+            <main>
+                <div class="container-fluid px-4 pt-5">
+                    <h3 class="mt-3 pt-5">MENU</h3>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link  btn btn-success" id="nav-BFR-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-BFR" type="button" role="tab" aria-controls="nav-BFR"
+                            aria-selected="false">Busquedas Frecuentes</button>
+                        <button class="nav-link  btn btn-success" id="nav-RegistroH-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-RegistroH" type="button" role="tab" aria-controls="nav-RegistroH"
+                            aria-selected="true">Registrar Hotel</button>
+                        <button class="nav-link  btn btn-success" id="nav-RegisAD-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-RegisAD" type="button" role="tab" aria-controls="nav-RegisAD"
+                            aria-selected="false">Registrar Administrador</button>
+                        <button class="nav-link  btn btn-success" id="nav-TablaHOTU-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-TablaHOTU" type="button" role="tab" aria-controls="nav-TablaHOTU"
+                            aria-selected="true" onclick="lista()">Usuarios y sus reservas</button>
+                        <button class="nav-link  btn btn-success" id="nav-TablaUSUR-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-TablaUSUR" type="button" role="tab" aria-controls="nav-TablaUSUR"
+                            aria-selected="true" onclick="lista2()">Usuarios Registrados</button>
+                        <button class="nav-link  btn btn-success" id="nav-TablaVisitas-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-TablaVisitas" type="button" role="tab" aria-controls="nav-TablaVisitas"
+                            aria-selected="true" onclick="lista3()">Usuarios y sus visitas</button>
+
+
+
+
+
+                    </div>
+                    </nav>
+                    <!-- EMPIEZA AQUI-->
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade" id="nav-BFR" role="tabpanel" aria-labelledby="nav-BFR-tab">
+                            <div class="card border-success mb-3">
+                                <div class="container mt-5 pt-5">
+                                    <h1 class="text-center mb-4">Preguntas y Respuestas</h1>
+                                    <table class="table table-bordered">
+                                        <thead class="thead-dark">
+                                            <tr>
+                                                <th>Busquedas</th>
+                                                <th>Respuesta</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="bg-white">¿Cuáles son los eventos y festivales más
+                                                    importantes de Barranquilla?</td>
+                                                <td><textarea class="form-control"
+                                                        rows="3">Los eventos y festivales más importantes de Barranquilla son el Carnaval de Barranquilla, considerado Patrimonio Cultural de la Humanidad, y la Feria de la Candelaria, que se celebra en septiembre.</textarea>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-white">¿Cuáles son los métodos de pago aceptados?</td>
+                                                <td><textarea class="form-control"
+                                                        rows="3">Actualmente no hay metodo de pago disponible.</textarea>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-white">¿Cuál es la política de devoluciones?</td>
+                                                <td><textarea class="form-control"
+                                                        rows="3">Las estipuladas por el Hotel/Restaurante/Evento, al que haya reservado.</textarea>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-white">¿Cuáles son los principales atractivos turísticos
+                                                    de Barranquilla?</td>
+                                                <td><textarea class="form-control" rows="3">Los principales atractivos turísticos de Barranquilla incluyen el Centro
+                                                        Histórico, el Museo del Caribe, el Estadio Metropolitano Roberto Meléndez, el Malecón del Río
+                                                        Magdalena y el Parque Cultural del Caribe.</textarea>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-white">¿Dónde puedo obtener información turística en
+                                                    Barranquilla?</td>
+                                                <td><textarea class="form-control" rows="3">Puedes obtener información turística en la Oficina de Turismo de Barranquilla,
+                                                        ubicada en el Centro Histórico, o en los diferentes centros de información turística
+                                                        distribuidos por la ciudad.</textarea>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-white">¿Cuál es la mejor época para visitar Barranquilla?
+                                                </td>
+                                                <td><textarea class="form-control" rows="3">La mejor época para visitar Barranquilla es durante el Carnaval de
+                                                        Barranquilla, que
+                                                        generalmente se celebra en febrero. También puedes disfrutar de buen clima y eventos culturales
+                                                        durante los meses de diciembre a abril.</textarea>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-white">¿Cómo puedo llegar a Barranquilla desde el
+                                                    aeropuerto?</td>
+                                                <td><textarea class="form-control"
+                                                        rows="3">Puedes llegar al centro de Barranquilla desde el aeropuerto Ernesto Cortissoz en taxi, Uber o
+                                                        servicio de transporte público. También hay servicios de traslado privado disponibles.</textarea>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-white">¿Cuáles son los platos típicos de la gastronomía
+                                                    barranquillera?</td>
+                                                <td><textarea class="form-control"
+                                                        rows="3">Puedes llegar al centro de Barranquilla desde el aeropuerto Ernesto Cortissoz en taxi, Uber o
+                                                        servicio de transporte público. También hay servicios de traslado privado disponibles.</textarea>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="bg-white">¿Qué actividades culturales y artísticas puedo
+                                                    disfrutar en Barranquilla?</td>
+                                                <td><textarea class="form-control"
+                                                        rows="3">En Barranquilla, puedes disfrutar de actividades culturales y artísticas como exposiciones de
+                                                        arte, conciertos, obras de teatro, festivales de música y danza, y eventos literarios en
+                                                        diferentes espacios culturales como el Teatro Amira de la Rosa y el Museo del Caribe.</textarea>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- HASTA AQUI-->
+                        <div class="tab-pane fade  active" id="nav-RegistroH" role="tabpanel"
+                            aria-labelledby="nav-RegistroH-tab">
+                            <!--TAB RegistroH--->
+                            <div class="card border-success mb-3">
+                                <div class="container">
+                                    <div class="registro activo" id="registro">
+                                        <div class="p-5">
+                                            <form class="p-4 border rounded bg-white" id="formulario">
+                                                <h2 class="mb-4">REGISTRO DE HOTELES</h2>
+                                                <div class="row mb-3">
+                                                    <div class="col-md-12">
+                                                        <input type="text" class="form-control mb-3" id="nombreH"
+                                                            placeholder="Nombre del Hotel" required />
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col-md-12">
+                                                        <input type="text" class="form-control mb-3" id="Direccion"
+                                                            placeholder="Direccion" required />
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col-md-12">
+                                                        <input type="text" class="form-control mb-3" id="descripcion"
+                                                            placeholder="Descripcion" required max="5" />
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col-md-6">
+                                                        <input type="number" class="form-control mb-3" id="valoracion"
+                                                            placeholder="Valoracion" required max="5" />
+                                                    </div>
+                                                </div>
+
+                                                <button type="submit" class="btn btn-primary mb-3">Registrar</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--TAB RegistroH Hasta aqui--->
+                        </div>
+
+
+                        <div class="tab-pane fade" id="nav-RegisAD" role="tabpanel" aria-labelledby="nav-RegisAD-tab">
+                            <!--- TAB RegisAD--->
+                            <div class="container">
+                                <div class="registro activo" id="registroAD">
+                                    <div class="p-5">
+                                        <form class="p-4 border rounded bg-white" id="formularioAD">
+                                            <h2 class="mb-4">Formulario de registro</h2>
+                                            <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                    <input type="text" class="form-control mb-3" id="nombre"
+                                                        placeholder="Nombres" required />
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="text" class="form-control mb-3" id="apellido"
+                                                        placeholder="Apellidos" required />
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-md-12">
+                                                    <input type="email" class="form-control mb-3" id="correo"
+                                                        placeholder="Correo" required />
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-md-4">
+                                                    <input type="password" class="form-control mb-3" id="contraseña"
+                                                        placeholder="Contraseña" required />
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <input type="password" class="form-control mb-3"
+                                                        id="confirmar_contraseña" placeholder="Confirmar contraseña"
+                                                        required />
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-md-12">
+                                                    <label class="form-label">Tipo de usuario:</label>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="tipoUsuario"
+                                                            id="adminRadio" value="administrador" required>
+                                                        <label class="form-check-label" for="adminRadio">
+                                                            Administrador
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="tipoUsuario"
+                                                            id="turistaRadio" value="turista" required>
+                                                        <label class="form-check-label" for="turistaRadio">
+                                                            Turista
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary mb-3" onclick="">Registrarse
+                                                ahora</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="tab-pane fade" id="nav-TablaUSUR" role="tabpanel"
+                            aria-labelledby="nav-TablaUSUR-tab">
+                            <!--- Tabla Registrados--->
+                            <main class="table pt-5">
+                                <section class="table__header">
+                                    <h1>Usuarios Registrados</h1>
+                                    <div class="export__file">
+                                        <label for="export-file" class="export__file-btn" title="Exportar"> </label>
+                                        <input type="checkbox" id="export-file">
+                                        <div class="export__file-options">
+                                            <label>Export As &nbsp; &#10140;</label>
+                                            <label for="export-file" id="toPDF">PDF <img src="../img/pdf.png" alt=""
+                                                    onclick="pdf_USUREGIS()"></label>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="table__body">
+                                    <table id="tablacontacs">
+                                        <thead>
+                                            <tr>
+                                                <th> ID <span class="icon-arrow">&UpArrow;</span></th>
+                                                <th> Nombre <span class="icon-arrow">&UpArrow;</span></th>
+                                                <th> Correo <span class="icon-arrow">&UpArrow;</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                        </tbody>
+                                    </table>
+                                </section>
+                            </main>
+                        </div>
+
+                        <div class="tab-pane fade" id="nav-TablaHOTU" role="tabpanel"
+                            aria-labelledby="nav-TablaHOTU-tab">
+                            <!--- TAB TablaHOTU--->
+                            <main class="table pt-5">
+                                <section class="table__header">
+                                    <h1>Usuarios Y sus Reservas</h1>
+                                    <div class="export__file">
+                                        <label for="export-file-hotel" class="export__file-btn"
+                                            title="Exportar"></label>
+                                        <input type="checkbox" id="export-file-hotel">
+                                        <div class="export__file-options">
+                                            <label>Export As &nbsp; &#10140;</label>
+                                            <label for="toPDF-hotel" id="toPDF-hotel">PDF <img src="/img/pdf.png" alt=""
+                                                    onclick="pdf_USURYRESER()"></label>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="table__body">
+                                    <table id="tablaHotelReserva">
+                                        <thead>
+                                            <tr>
+                                                <th> Nombre_Turista <span class="icon-arrow">&UpArrow;</span></th>
+                                                <th> Nombre_Hotel <span class="icon-arrow">&UpArrow;</span></th>
+                                                <th> Fecha de entrada <span class="icon-arrow">&UpArrow;</span></th>
+                                                <th> Fecha de Salida <span class="icon-arrow">&UpArrow;</span></th>
+                                                <th> Cantidad de personas <span class="icon-arrow">&UpArrow;</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                        </tbody>
+                                    </table>
+                                </section>
+                            </main>
+                        </div>
+                        <!--FIN Tabla Registrados--->
+
+
+                        <div class="tab-pane fade" id="nav-TablaVisitas" role="tabpanel"
+                            aria-labelledby="nav-TablaVisitas-tab">
+                            <!--- TAB TablaHOTU--->
+                            <main class="table pt-5">
+                                <section class="table__header">
+                                    <h1>Usuarios Y sus Visitas</h1>
+                                    <div class="export__file">
+                                        <label for="export-file-Visitas" class="export__file-btn"
+                                            title="Exportar"></label>
+                                        <input type="checkbox" id="export-file-Visitas">
+                                        <div class="export__file-options">
+                                            <label>Export As &nbsp; &#10140;</label>
+                                            <label for="toPDF-Visitas" id="toPDF-Visitas">PDF <img src="/img/pdf.png"
+                                                    alt="" onclick="pdf_USUVISITAS()"></label>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="table__body">
+                                    <table id="tablaVisitaX">
+                                        <thead>
+                                            <tr>
+                                                <th> Nombre_Turista <span class="icon-arrow">&UpArrow;</span></th>
+                                                <th> Nombre del Sitio <span class="icon-arrow">&UpArrow;</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                        </tbody>
+                                    </table>
+                                </section>
+                            </main>
+                        </div>
+                        <!--FIN Tabla Registrados--->
+
+                    </div>
+                </div>
+
+
+
+            </main>
+
+        </div>
+    </div>
+</body>
+
+
+<!--JS aqui-->
+<script src="../js/TablaReservasAD.js"></script>
+<script src="../js/TablaRegisAD.js"></script>
+<script src="../js/TablaVisitasAD.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/RegistroHotel.js"></script>
+<script src="../js/Exportar.js"></script>
+<!--JS Hasta aqui-->
+<!--AXIOS aqui-->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<!--Hasta aqui-->
+<!-- TABLA USUARIOS REGISTRADOS-->
+<link rel="stylesheet" href="text/css" href="../datatables/datatables.min.css">
+<link rel="stylesheet" href="text/css" href="../datatables/DataTables-1.13.6/css/dataTables.bootstrap4.min.css">
+<!-- TABLA USUARIOS REGISTRADOS FIN-->
+<!--Datatables-->
+<script type="text/javascript" src="../datatables/datatables.min.js"></script>
+<script type="text/javascript" src="../TABLA/main.js"></script>
+<script type="text/javascript" src="../TABLA/buscar.js"></script>
+<!--Datatables Hasta aqui-->
+<!-- PDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://unpkg.com/jspdf-autotable"></script>
+<script src="https://unpkg.com/jspdf"></script>
+
+</html>

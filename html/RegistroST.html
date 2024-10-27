@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <!-- BOOSTRAP -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../js/bootstrap.js">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Hasta aqui -->
+    <link rel="icon" href="../img/IconoBQ.png">
+    <script src="../js/RegistroST.js"></script>
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand">TURIBQ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/MenuAD.html">Atras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html" onclick="logout()">Cerrar sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="content-wrapper">
+
+    <body class="bg-image" style="background-image: url('../img/Fondo.jpeg');">
+        <div class="container">
+            <div class="registro activo" id="registro">
+                <div class="p-5">
+                    <form class="p-4 border rounded bg-white" id="formulario">
+                        <h2 class="mb-4">REGISTRO DE SITIOS TURISTICOS</h2>
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <input type="text" class="form-control mb-3" id="Nombre_sitioT" placeholder="Nombre del Sitio Turistico"
+                                    required />
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <input type="text" class="form-control mb-3" id="direccion" placeholder="Direccion"
+                                    required />
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <input type="text" class="form-control mb-3" id="descripcion" placeholder="Descripcion" required max="5" />
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-3">Registrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</html>

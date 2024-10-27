@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VISITANTE</title>
+  <!--BOOSTRAP-->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="js/bootstrap.js">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!--Hasta aqui-->
+  <!--AXIOS aqui-->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <!--Hasta aqui-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <link rel="icon" href="img/IconoBQ.png">
+  <script src="js/login.js"></script>
+  <script src="js/registro.js"></script>
+  <script src="js/Login2.js"></script>
+</head>
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">TURIBQ</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#Container1">1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Container2">2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Container3">3</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Usuarios
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <button type="button" class="dropdown-item" data-toggle="modal" data-target="#myModalogin">
+                <i>Iniciar Sesión</i>
+              </button>
+              <button type="button" class="dropdown-item" data-toggle="modal" data-target="#myModalRegis">
+                <i>Registrarse</i>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+<div class="content-wrapper">
+
+  <body class="" style="background-color: rgb(89, 176, 197);">
+
+    <!-- Modal LOGIN-->
+    <div class="modal fade" id="myModalogin">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">INICIAR SESION</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body">
+            <!-- Modal LOGIN -->
+            <form id="login-form">
+              <h2 class="text-center">Iniciar sesión</h2>
+              <div class="form-group">
+                <input type="correo" class="form-control" id="correo-input" placeholder="Usuario" required />
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" id="contraseña-input" placeholder="Contraseña" required />
+              </div>
+              <div class="form-group text-center">
+                <p class="Olvide-contraseña">
+                  <a href="../html/registro.html">Olvidé mi contraseña</a>
+                </p>
+              </div>
+              <div class="form-group text-center">
+                <button type="submit" onclick="login()" class="btn btn-primary btn-block">
+                  Iniciar sesión
+                </button>
+              </div>
+              <div class="form-group text-center">
+                <p class="not-member">
+                  No tienes una cuenta?
+                  <a href="../html/registro.html">Regístrate ahora</a>
+                </p>
+              </div>
+            </form>
+          </div>
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal REGISTRO-->
+    <div class="modal fade" id="myModalRegis">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">REGISTRO</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body">
+            <!-- Contenido REGISTRO-->
+            <form class="p-4 border rounded bg-white" id="formulario">
+              <h2 class="mb-4">Formulario de registro</h2>
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <input type="text" class="form-control mb-3" id="nombre" placeholder="Nombres" required />
+                </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control mb-3" id="apellido" placeholder="Apellidos" required />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-md-12">
+                  <input type="email" class="form-control mb-3" id="correo" placeholder="Correo" required />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <input type="password" class="form-control mb-3" id="contraseña" placeholder="Contraseña" required />
+                </div>
+                <div class="col-md-6">
+                  <input type="password" class="form-control mb-3" id="confirmar contraseña"
+                    placeholder="Confirmar contraseña" required />
+                </div>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" required />
+                <label class="form-check-label">
+                  Acepto los <a href="/html/TerminosDeUso.html" target="_blank">Términos de Uso</a>
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary mb-3">Registrarse ahora</button>
+              <div class="Inicio-sesion">
+                <p class="not-member">
+                  ¿Ya tienes una cuenta?
+                  <a href="login.html">Iniciar sesión</a>
+                </p>
+              </div>
+            </form>
+          </div>
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal ADMIN-->
+    <div class="modal fade" id="myModalAD">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">ADMINISTRADOR</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form id="login-form">
+              <h2 class="text-center">Iniciar sesión</h2>
+              <div class="form-group">
+                <input type="correo" class="form-control" id="correo-AD" placeholder="Usuario" required />
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" id="contraseña-AD" placeholder="Contraseña" required />
+              </div>
+              <div class="form-group text-center">
+                <p class="Olvide-contraseña">
+                  <a href="../html/registro.html">Olvidé mi contraseña</a>
+                </p>
+              </div>
+              <div class="form-group text-center">
+                <button type="button" onclick="loginAD()" class="btn btn-primary btn-block">
+                  Iniciar sesión
+                </button>
+              </div>
+              <div class="form-group text-center">
+                <p class="not-member">
+                  No tienes una cuenta?
+                  <a href="../html/registro.html">Regístrate ahora</a>
+                </p>
+              </div>
+            </form>
+          </div>
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center mt-5">
+          <h2>BARRANQUILLA</h2>
+        </div>
+      </div>
+      <div class="container py-5 bg-white rounded-lg mb-5" id="Container1">
+        <div class="row my-5">
+          <div class="col-md-8 mx-auto">
+            <h2 class="titulo_carnaval text-center">EL TURISMO EN EPOCA DE CARNAVAL</h2>
+            <div class="img_carnaval text-center">
+              <img src="img/MP_CARNAVAL_INTERNA.jpg" alt="Carnaval" class="img-fluid">
+            </div>
+            <p>El Carnaval de Barranquilla tiene un impacto significativo en el turismo de la ciudad. Como una de las
+              festividades más importantes de Colombia y reconocido como Patrimonio Cultural Inmaterial de la Humanidad
+              por
+              la UNESCO, atrae a una gran cantidad de visitantes nacionales e internacionales.</p>
+
+            <p>El turismo durante el Carnaval de Barranquilla genera un impulso económico considerable. Los turistas
+              gastan
+              en alojamiento, transporte, alimentos, souvenirs y otros servicios relacionados, lo que beneficia
+              directamente
+              a la economía local y a los negocios locales. Durante la temporada del Carnaval, los hoteles, restaurantes
+              y
+              comercios experimentan un aumento en la demanda de servicios, lo que resulta en la generación de empleo y
+              un
+              mayor desarrollo económico para la ciudad.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container py-5 rounded bg-white mb-5" id="Container2">
+        <div class="row my-5">
+          <div class="col-md-8 mx-auto">
+            <h2 class="text-center">LA VENTANA DEL MUNDO</h2>
+            <div class="img_ventanadelmundo text-center">
+              <img src="img/Ventanadelmundo.jpg" alt="" class="img-fluid">
+            </div>
+            <p>La Ventana al Mundo de Barranquilla es un lugar fascinante que debes explorar durante tu visita a esta
+              vibrante ciudad. Es un ícono arquitectónico y cultural que te transportará a diferentes partes del mundo
+              sin
+              salir de Barranquilla.</p>
+            <p>Al ingresar a la Ventana al Mundo, serás recibido por una impresionante estructura que representa la
+              diversidad y la globalidad. Este lugar te invita a sumergirte en un viaje multicultural a través de sus
+              exhibiciones y eventos. Podrás disfrutar de exposiciones artísticas, muestras culturales y presentaciones
+              en
+              vivo que te mostrarán las diferentes tradiciones y manifestaciones artísticas de distintos países.</p>
+          </div>
+        </div>
+      </div>
+      <div class="container py-5 rounded bg-white" id="Container3">
+        <div class="row my-5">
+          <div class="col-md-8 mx-auto">
+            <h2 class="text-center">EL MALECON</h2>
+            <div class="img_malecon text-center">
+              <img src="img/Malecon.jpg" alt="" class="img-fluid">
+            </div>
+            <p>El Malecón de Barranquilla es un lugar emblemático y vibrante que no te puedes perder si estás pensando
+              en
+              visitar esta maravillosa ciudad. Ubicado a orillas del río Magdalena, el Malecón es un espacio fascinante
+              que combina naturaleza, cultura y entretenimiento en un solo lugar.</p>
+            <p>Al recorrer el Malecón, te sumergirás en una experiencia única. Podrás disfrutar de amplias áreas verdes,
+              perfectas para relajarte y disfrutar de hermosas vistas al río. El paisaje es simplemente impresionante,
+              con
+              el río Magdalena fluyendo majestuosamente y creando un ambiente tranquilo y pintoresco.</p>
+            <p>Pero eso no es todo, el Malecón de Barranquilla también es conocido por su vibrante ambiente cultural.
+              Durante tu visita, podrás explorar diferentes esculturas y monumentos que representan la rica historia y
+              cultura de la ciudad. Además, el Malecón es escenario de diversos eventos culturales y festivales, donde
+              podrás disfrutar de música en vivo, danzas folclóricas y muestras artísticas.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video Start -->
+      <div class="container py-5 mb-5">
+        <div class="row justify-content-center">
+          <div class="col-md-6 bg-dark text-center">
+            <div class="p-5">
+              <h6 class="text-white text-uppercase mb-3">TURIBQ</h6>
+              <h1 class="text-white mb-4">¿Quieres saber cómo es Barranquilla?</h1>
+              <p class="text-white mb-4">La ciudad es conocida por su enorme Carnaval, que reúne a artistas con
+                extravagantes disfraces, carros elaborados y música cumbia. En el elegante vecindario El Prado, el Museo
+                Romántico exhibe artefactos de festivales y exhibiciones anteriores de famosos colombianos, como el
+                escritor Gabriel García Márquez.</p>
+              <p class="text-white mb-4">¡AQUÍ TE DEJAMOS UN VIDEO SI QUIERES SABER MÁS!</p>
+              <div class="d-flex justify-content-center">
+                <a href="https://www.youtube.com/watch?v=_8bTcwGdwRI&pp=ygUMQmFycmFucXVpbGxh" target="_blank"
+                  class="btn btn-primary">Ver video</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Video End -->
+
+  </body>
+
+</div>
+<footer>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalAD">
+    ADMIN
+  </button>
+  <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
+    <div class="container pb-5">
+      <div class="row g-5">
+        <div class="col-md-6 col-lg-4">
+          <div class="bg-primary rounded p-4">
+            <a href="index.html">
+              <h1 class="text-white text-uppercase mb-3">TURIBQ</h1>
+            </a>
+            <p class="text-white mb-0">-Bienvenido</p>
+            <p class="text-white mb-0">Juan David Charris Barceló</p>
+            <p class="text-white mb-0">Habib José Morales Minaya</p>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <h6 class="section-title text-start text-primary text-uppercase mb-4">Contacto</h6>
+          </p>
+          <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+57 0000000000</p>
+          <p class="mb-2"><i class="fa fa-envelope me-3"></i>Turibq123@gmail.com</p>
+          <div class="d-flex pt-2">
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-12">
+          <div class="row gy-5 g-4">
+            <div class="col-md-6">
+              <h6 class="section-title text-start text-primary text-uppercase mb-4">
+                OPCIONES</h6>
+              <a class="btn btn-link" href="../html/Acerca de nosotros.html" target="_blank">Acerca de nosotros</a>
+              <a class="btn btn-link" href="../html/TerminosDeUso.html" target="_blank">Terminos y condiciones</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="copy text-center">©<span class="color-span">copyright/TURIBQ</span></p>
+  </div>
+</footer>
+
+</html>
